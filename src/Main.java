@@ -10,7 +10,7 @@ public class Main {
         contact.addPerson(person1);
         contact.addPerson(person2);
 
-        System.out.println(contact);
+        contact.display();
     }
 }
 
@@ -24,16 +24,13 @@ class Person{
     }
     @Override
     public String toString() {
-        return "Contact{" +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return "*****\nName: " + name + "\nEmail Address:" + email + "\n";
     }
 
 }
 
 class Contact implements Iterable{
-    private ArrayList<Person> myList = new ArrayList<Person>();
+    private ArrayList<Person> myList = new ArrayList<>();
     public Contact(){
     }
     public void addPerson(Person a){
@@ -45,8 +42,16 @@ class Contact implements Iterable{
                 "myList=" + myList +
                 '}';
     }
+
     @Override
     public Iterator iterator() {
-        return myList.iterator();
+        return null;
+    }
+
+    public void display(){
+        Iterator<Person> it = myList.iterator();
+        for (int i = 0; i < myList.size(); i++) {
+            System.out.println(it.next());
+        }
     }
 }
