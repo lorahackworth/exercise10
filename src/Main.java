@@ -48,6 +48,7 @@ class Contact implements Iterable{
         return null;
     }
 
+    //has to have a for-each loop
     public void display(){
         Iterator<Person> it = myList.iterator();
         for (int i = 0; i < myList.size(); i++) {
