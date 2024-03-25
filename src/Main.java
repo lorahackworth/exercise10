@@ -44,8 +44,8 @@ class Contact implements Iterable{
     }
 
     @Override
-    public Iterator iterator() {
-        return null;
+    public Iterator<Person> iterator() {
+        return myList.iterator();
     }
 
     //has to have a for-each loop
